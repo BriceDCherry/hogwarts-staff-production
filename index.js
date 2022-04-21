@@ -24,6 +24,8 @@ const staff = {
     "image": "http://hp-api.herokuapp.com/images/mcgonagall.jpg"
 }
 
+
+
 const hogwartsStaffApiUrl = `http://hp-api.herokuapp.com/api/characters/staff`
 
 fetch(hogwartsStaffApiUrl)
