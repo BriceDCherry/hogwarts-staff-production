@@ -24,36 +24,31 @@ const students = {
     "image": "http://hp-api.herokuapp.com/images/harry.jpg"
 }
 
-
+const select = document.querySelector("#name")
+const form = document.forms.input
 
 const hogwartsStudentsApiUrl = `http://hp-api.herokuapp.com/api/characters/students`
 
 fetch(hogwartsStudentsApiUrl)
     .then(response => response.json())
     .then(allHogwartsStudents => {
-        const studentsContainer = document.querySelector(".students-container");
-        studentsContainer.innerHTML = ``;
-        console.log(allHogwartsStudents)
-
-        allHogwartsStudents.filter(studentsInfo => studentsInfo.image).forEach(studentsInfo => {
-            const studentsEl = document.createElement("li");
-            studentsEl.classList.add("students");
-
-            const studentsName = document.createElement("h2")
-            studentsName.classList.add("students-name");
-            studentsName.textContent = studentsInfo.name;
-
-            const studentsActor = document.createElement("p");
-            studentsActor.classList.add("students-actor");
-            studentsActor.textContent = studentsInfo.actor;
-
-            const studentsImage = document.createElement("img");
-            studentsImage.classList.add("students-image");
-            studentsImage.src = studentsInfo.image;
-
-            studentsEl.append(studentsName);
-            studentsEl.append(studentsActor);
-            studentsEl.append(studentsImage);
-            studentsContainer.append(studentsEl);
+        allHogwartsStudents.map(student => {
+            const option = document.createElement("option")
+            option.textContent = `${student.name}`
+            option.value = `${student.name}`
+            option.name = `${student.name}`
+            return option
+        }).forEach(option => {
+            select.append(option)
         })
     })
+
+    function handleSubmit(event) {
+        event.preventDefault()
+    
+        const formData = new FormData(event.target)
+        const asString = new URLSearchParams(formData).toString()
+        window.location.href = `students.html?${asString}`
+    }
+    
+    form.addEventListener("submit", handleSubmit)
