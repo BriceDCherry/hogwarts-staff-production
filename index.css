@@ -55,29 +55,29 @@ header {
     font-size: 2rem;
 }
 
-.staff-container {
+.students-container {
     display: flex;
     flex-wrap: wrap;
 }
 
-.staff {
+.students {
     margin: 1rem;
 }
 
-.staff-name {
+.students-name {
     font-size: 1.5rem;
     font-weight: 900;
     margin-bottom: 0.6rem;
 }
 
-.staff-actor {
+.students-actor {
     color: gray;
     font-weight: 600;
 }
 
 
 
-.staff-image {
+.students-image {
     width: 150px;
     height: 250px;
 }
