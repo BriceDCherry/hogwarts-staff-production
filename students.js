@@ -52,6 +52,9 @@ fetch(hogwartsStudentsApiUrl)
         const studentHouse = document.createElement("p");
         studentHouse.textContent = student.house;
 
+        const studentAncestry = document.createElement("p");
+        studentAncestry.textContent = student.ancestry;
+
         const studentImage = document.createElement("img");
         studentImage.classList.add("students-image");
         studentImage.src = student.image;
@@ -60,6 +63,7 @@ fetch(hogwartsStudentsApiUrl)
         main.append(studentName);
         main.append(studentActor);
         main.append(studentHouse);
+        main.append(studentAncestry)
         wrapper.append(studentImage);
        
         
