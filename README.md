@@ -2,4 +2,4 @@ This website shows you the students of Hogwarts. You are able to select your fav
 
 ![Screenshot of Front Page](./front%20page.PNG)
 
-![Screenshot of Character Page](./character page.PNG)
+![Screenshot of Character Page](./character%20page.PNG)
