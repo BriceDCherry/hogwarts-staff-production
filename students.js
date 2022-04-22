@@ -25,6 +25,7 @@ const students = {
 }
 const main = document.querySelector("main")
 const queryString = new URLSearchParams(window.location.search).get("name")
+const wrapper = document.querySelector(".wrapper")
 
 
 const hogwartsStudentsApiUrl = `http://hp-api.herokuapp.com/api/characters/students`
@@ -48,6 +49,9 @@ fetch(hogwartsStudentsApiUrl)
         studentActor.classList.add("students-actor");
         studentActor.textContent = student.actor;
 
+        const studentHouse = document.createElement("p");
+        studentHouse.textContent = student.house;
+
         const studentImage = document.createElement("img");
         studentImage.classList.add("students-image");
         studentImage.src = student.image;
@@ -55,7 +59,8 @@ fetch(hogwartsStudentsApiUrl)
         
         main.append(studentName);
         main.append(studentActor);
-        main.append(studentImage);
+        main.append(studentHouse);
+        wrapper.append(studentImage);
        
         
     })

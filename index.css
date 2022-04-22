@@ -50,13 +50,13 @@ header {
     align-items: center;
 }
 
-li {
-    
+nav {
+    margin-left: 1rem;
 }
 
 #logo {
     font-weight: 900;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .students-container {
@@ -87,5 +87,47 @@ li {
 .students-image {
     width: 150px;
     height: 250px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
+
+.box {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin: 1rem;
+}
+
+.wrapper {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+      
+
+}
+
+h2 {
+    text-align: center;
+    margin: 1rem;
+    font-weight: 900;
+    font-size: 1.2rem;
+}
+
+p {
+    text-align: center;
+    margin: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+form {
+    text-align: center;
+    margin: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
